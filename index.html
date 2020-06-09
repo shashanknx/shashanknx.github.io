@@ -72,7 +72,9 @@
       <div class="col-xs-6 col-md-4" id="menu">
           <div class="container" id="height">
             <div class="row" style="background-color:#4da6ff; margin:10px 0">
-              <button id="whiteboardSel"> Whiteboard </button>
+              <button id="whiteboardSel"> Whiteboard
+                <!--<a href="./whiteboard.html">Whiteboard</a>-->
+              </button>
             </div>
             <div class="row" style="background-color:#4da6ff; margin:10px 0">
               <a href="./index.html"> Notebook </a>
@@ -93,7 +95,7 @@
 
         <div class="row" id="appWindow">
           <img src="back.png" id="back" alt="background image">
-          <canvas id="whiteboard" style="background-color: white"></canvas>
+          <iframe id="whiteboard" src="./whiteboard.html"></iframe>
           <iframe id="about" src="./resume.html"></iframe>
         </div>
 
@@ -126,7 +128,7 @@
   <script>
 
   $(document).ready(() => {
-    document.getElementById("whiteboard").style.display = "none";
+    document.getElementById("whiteboard").style.display = "block";
     document.getElementById("about").style.display = "none";
     let windowHeight = $("#height").height();
     let infoHeight = $("#info").height();
@@ -144,35 +146,7 @@
       document.getElementById("back").style.display = "none";
       document.getElementById("whiteboard").style.display = "none";
       document.getElementById("about").style.display = "block";
-
     });
-
-    $("canvas").click((e) => {
-      var c = document.getElementById("whiteboard");
-      ctx = setupCanvas(c);
-      let mx = e.clientX;
-      let my = e.clientY;
-      ctx.moveTo(0.5, 0.5);
-      ctx.lineTo(200.5, 100.5);
-      ctx.stroke();
-    });
-
-
-    function setupCanvas(canvas) {
-      // Get the device pixel ratio, falling back to 1.
-      var dpr = window.devicePixelRatio || 1;
-      // Get the size of the canvas in CSS pixels.
-      var rect = canvas.getBoundingClientRect();
-      // Give the canvas pixel dimensions of their CSS
-      // size * the device pixel ratio.
-      canvas.width = rect.width * dpr;
-      canvas.height = rect.height * dpr;
-      var ctx = canvas.getContext('2d');
-      // Scale all drawing operations by the dpr, so you
-      // don't have to worry about the difference.
-      ctx.scale(dpr, dpr);
-      return ctx;
-    }
   });
 
   </script>
