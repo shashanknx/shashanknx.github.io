@@ -79,14 +79,14 @@
             <div class="row" style="background-color:#4da6ff; margin:10px 0">
               <a href="./index.html"> Notebook </a>
             </div>
-            <div class="row" style="background-color:#4da6ff; margin:10px 0; border-style:inset">
+            <div class="row" style="background-color:#4da6ff; margin:10px 0;">
               <a href="./index.html"> Home </a>
             </div>
             <div class="row" style="background-color:#4da6ff; margin:10px 0">
               <button id="aboutSel"> About </button>
             </div>
             <div class="row" style="background-color:#4da6ff; margin:10px 0">
-              <a href=""> Timer </a>
+              <button id="timerSel"> Timer </button>
             </div>
           </div>
         </div>
@@ -97,19 +97,20 @@
           <img src="back.png" id="back" alt="background image">
           <iframe id="whiteboard" src="./whiteboard.html"></iframe>
           <iframe id="about" src="./resume.html"></iframe>
+          <iframe id="timer" src="./timer.html"></iframe>
         </div>
 
         <div class="row" id="info" style="padding:0">
-            <div class="col-md-3">
+            <!--<div class="col-md-3">
               <a href="mailto:shashanknx@gmail.com">Contact</a>
-            </div>
-            <div class="col-md-3">
+            </div> -->
+            <!--<div class="col-md-3">
               <a href="https://github.com/shashanknx/">GitHub</a>
-            </div>
-            <div class="col-md-3">
+            </div>-->
+            <!--<div class="col-md-3">
               <a href="">Blog</a>
-            </div>
-            <div class="col-md-3">
+            </div>-->
+            <div class="col-md-12">
               <a href="">Change Background</a>
             </div>
         </div>
@@ -130,22 +131,38 @@
   $(document).ready(() => {
     document.getElementById("whiteboard").style.display = "block";
     document.getElementById("about").style.display = "none";
+    document.getElementById("timer").style.display = "none";
     let windowHeight = $("#height").height();
     let infoHeight = $("#info").height();
     $("#appWindow").height(windowHeight + 30);
     $("#whiteboard").width($("#appWindow").width());
     $("#about").width($("#appWindow").width());
+    $("#timer").width($("#appWindow").width());
+
+    let current = document.getElementById("back")
 
     $("#whiteboardSel").click(() => {
+      current.style.display = "none";
       document.getElementById("back").style.display = "none";
+      current = document.getElementById("whiteboard")
       document.getElementById("whiteboard").style.display = "block";
       document.getElementById("about").style.display = "none";
     });
 
     $("#aboutSel").click(() => {
+      current.style.display = "none"
       document.getElementById("back").style.display = "none";
       document.getElementById("whiteboard").style.display = "none";
       document.getElementById("about").style.display = "block";
+      current = document.getElementById("about")
+    });
+
+    $("#timerSel").click(() => {
+      current.style.display = "none";
+      document.getElementById("whiteboard").style.display = "none";
+      document.getElementById("timer").style.display = "block";
+      current = document.getElementById("timer")
+
     });
   });
 
