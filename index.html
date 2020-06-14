@@ -33,37 +33,39 @@
 
     .sidenav {
       height: 100%;
-      width: 200px;
+      width: 20%;
       position: fixed;
       z-index: 1;
       top: 60px;
       left: 0;
       background-color: #111;
       overflow-x: hidden;
-      padding-top: 10%;
+      align-items: center;
+      padding: 20rem 5rem 5rem 5rem;
     }
 
     .sidenav a {
-      padding: 6px 8px 40% 6px;
+      padding: 6px 8px 6px 6px;
       text-decoration: none;
-      font-size: 25px;
+      font-size: 30px;
       color: #818181;
       display: block;
     }
+
 
     .sidenav a:hover {
       color: #f1f1f1;
     }
 
     .main {
-      margin-left: 210px;
+      margin-left: 20%;
       /* Same as the width of the sidenav */
       font-size: 28px;
       /* Increased text to enable scrolling */
       padding-top: 5rem;
       padding-bottom: 5rem;
       padding-left: 1rem;
-      padding-right: 3rem;
+      padding-right: 20rem;
       /* padding: 60px 20px 20px; */
       text-align: left;
       min-height: 100vh;
@@ -76,11 +78,15 @@
       .sidenav {
         display: none
       }
+
       .main {
-        padding: 5rem 2rem 2rem 0.5rem;
+        /* clockwise */
+        padding: 5rem 15rem 5rem 5rem;
+
         margin-left: 0;
         font-size: 16px;
       }
+
       .navbar {
         display: none
       }
@@ -109,23 +115,91 @@
   <!-- Content -->
 
   <div class="sidenav">
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#interests">Interests</a>
+    <div id="side">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#interests">Interests</a>
+    </div>
   </div>
 
   <div class="main" id="about">
     <div>
-      <h1>Shashank Narayan</h1>
-      <h4>Student - Tech Enthusiast - Altanta GA</h4>
-      <p> I am a georgia tech student graduating in fall 2020 </p>
+      <h1 style="font-size: 50pt">Shashank Narayan</h1>
+      <h2>Georgia Tech Student | Atlanta GA | <a href="mailto:shashanknx@gmail.com">shashanknx@gatech.edu</a></h2>
+      <br>
+      <!-- Contact info, professional profile, github/social media links-->
+      <p> I'm a resourceful undergraduate student with a broad and well-rounded skillset seeking to use abilities in engineering, computer science, and teamwork to meet organization needs. I designed and prototyped new rotor technology during my most recent internship at Bell Helicopter.</p>
+      <ul>
+        <li>
+          Check out my projects at <a href="http://github.com/shashanknx">github.com/shashanknx</a>
+        </li>
+      </ul>
+
     </div>
   </div>
+  <hr>
+    <div class="main" id="skills">
+      <div>
+        <h1>Skills</h1>
+        <p>
+          <b> Programming </b> <br>
+        </p>
+        <p>
+          <ul>
+            <li>
+              Front end development <br>
+              <a href="https://github.com/shashanknx/react-app">CS 4261 Project: FoodFinder</a>
+              <!-- Todo: Link to FoodFinder -->
+            </li>
+            <li>
+              Machine learning <br>
+              <a href="https://github.com/shashanknx/mlproject">CS 4641 Regression Project</a>
+            </li>
+            <li>
+              Robotics: <br>
+              Used the MATLAB ROS package to run robotics simulations in <a href="http://gazebosim.org">Gazebo</a>
+            </li>
+          </ul>
+        </p>
+        <p>
+          <b> Engineering </b> <br>
+        </p>
+        <p>
+          <ul>
+            <li>
+              Computer Aided Design (CAD)
+            </li>
+            <li>
+              Multibody Dynamics (MBD) and Computational Fluid Dynamics (CFD)
+            </li>
+            <li>
+              Finite Element Analysis (FEA)
+            </li>
+          </ul>
+        </p>
+        <p>
+          <b> Product Development: </b> <br>
+        </p>
+        <p>
+          <ul>
+            <li>
+              <b>Agile Development:</b> Sprint, Minimum Viable Prototypes (MVP), Feedback and Data Collection
+            </li>
+            <li>
+              <b>User Centered Design:</b> Storyboards, Business Model Canvas (BMC), Competitive Analysis, and Customer Discovery
+            </li>
+            <li>
+              <b>Marketing Products:</b> Presentations/Elevator Pitches, Video, Social Media, and Landing Pages
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <hr>
   <div class="main" id="experience">
     <div>
-      <h1>Experience</h1>
-
+      <h1>Professional Experience</h1>
       <p>
         <b> Bell Flight </b> <br>
         Aerospace Engineering Intern <br>
@@ -151,17 +225,12 @@
       </p>
     </div>
   </div>
-  <div class="main" id="skills">
-    <div>
-      <h1>Skills</h1>
-
-      <p> Software, Design, Teamwork, Public Speaking </p>
-    </div>
-  </div>
+  <hr>
   <div class="main" id="interests">
     <div>
       <h1>Interests</h1>
-      <p> Guitar, Coding, Reading, Soccer </p>
+      <br>
+      <p> When I'm not studying for classes, my main interests are practicing guitar, reading books, and playing soccer. I'm also an avid cook and love to try new dishes when I'm at home. </p>
     </div>
   </div>
 </body>
