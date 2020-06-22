@@ -13,6 +13,7 @@
 
   <title>Shashank's Website!</title>
 
+  <!-- Todo: External Stylesheet -->
   <style>
     html {
       scroll-behavior: smooth;
@@ -28,7 +29,7 @@
     .navbar {
       position: fixed;
       width: 100%;
-      height: 60px
+      height: 60px;
     }
 
     .sidenav {
@@ -36,22 +37,18 @@
       width: 20%;
       position: fixed;
       z-index: 1;
-      /* top: 60px; */
+      top: 60px;
       left: 0;
       background-color: #111;
-      overflow-x: hidden;
-      align-items: center;
-      padding: 20rem 5rem 5rem 5rem;
+      text-align: center;
+      padding-top: 10rem
     }
 
     .sidenav a {
-      padding: 6px 8px 6px 6px;
       text-decoration: none;
       font-size: 30px;
       color: #818181;
-      display: block;
     }
-
 
     .sidenav a:hover {
       color: #f1f1f1;
@@ -61,18 +58,12 @@
       margin-left: 20%;
       /* Same as the width of the sidenav */
       font-size: 28px;
-      /* Increased text to enable scrolling */
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      padding-left: 1rem;
-      padding-right: 20rem;
-      /* padding: 60px 20px 20px; */
+      padding: 5rem 5rem 5rem 5rem;
       text-align: left;
       min-height: 100vh;
       align-items: center;
       display: flex;
     }
-
 
     @media screen and (max-width: 768px) {
       .sidenav {
@@ -81,28 +72,17 @@
 
       .main {
         /* clockwise */
-        padding: 5rem 15rem 5rem 5rem;
-
+        /* padding: 3rem 5rem 5rem 3rem; */
+        padding: 1rem;
         margin-left: 0;
-        font-size: 16px;
+        font-size: 22px;
       }
-
-      .navbar {
-        display: none
-      }
-
     }
   </style>
 </head>
 
 <body>
-
-
-  <!-- Navigation
-
-  ''''This will be re-implemented when the timer and whiteboard apps are working again.
-  ''''
-
+<!-- Todo: Fix Navbar so it works on mobile -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <a class="navbar-brand" href="./index.html">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,115 +90,107 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <div class="navbar-nav mr-auto">
-        <a class="nav-item nav-link" id="whiteboardLink" href="./whiteboard.html">Whiteboard</a>
-        <a class="nav-item nav-link disabled" href="./timer.html">Timer</a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/shashank-a-narayan/">LinkedIn</a>
+          </li>
+          <a class="nav-item nav-link" href="http://github.com/shashanknx">
+            GitHub
+          </a>
+          <a class="nav-item nav-link" href="https://www.instagram.com/invites/contact/?i=1ikmq8grrdmcw&utm_content=1xbydck">
+            Instagram
+          </a>
+          <a class="nav-item nav-link" href="https://twitter.com/theshanknado">
+            Twitter
+          </a>
       </div>
     </div>
   </nav>
 
-  -->
-
-
-  <!-- Content -->
-
-  <!-- Feeeback
-  Rashad
-  ''' - Add dates for internship
-
-  Dad
-  ''' -
-
-  -->
-
   <div class="sidenav">
-    <div id="side">
+    <div>
       <a href="#about">About</a>
+      <br>
+      <br>
+      <br>
       <a href="#skills">Skills</a>
+      <br>
+      <br>
+      <br>
       <a href="#experience">Experience</a>
+      <br>
+      <br>
+      <br>
       <a href="#interests">Interests</a>
     </div>
   </div>
 
   <div class="main" id="about">
     <div>
-      <h1 style="font-size: 50pt">Shashank Narayan</h1>
-      <h2>Georgia Tech Student | Atlanta GA | <a href="mailto:shashanknx@gmail.com">shashanknx@gatech.edu</a></h2>
+      <h1 style="font-size: 48px">Shashank Narayan</h1>
+      <h2 style="font-size:30px">Georgia Tech Student | Atlanta GA | <a href="mailto:shashanknx@gmail.com">shashanknx@gatech.edu</a></h2>
       <br>
       <!-- Contact info, professional profile, github/social media links-->
-      <p> I'm a resourceful undergraduate student with a broad and well-rounded skillset seeking to use abilities in engineering, computer science, and product development to meet organization needs. I designed and prototyped new rotor technology during my most recent internship at Bell Helicopter.</p>
-      <ul>
-        <li>
-          Check out my projects at <a href="http://github.com/shashanknx">github.com/shashanknx</a>
-        </li>
-        <li>
-          Instagram
-        </li>
-        <li>
-          LinkedIn
-        </li>
-        <li>
-          Facebook
-        </li>
-      </ul>
-
+      <p> Undergraduate student with a well-rounded experience in meeting organization needs through skills in design, development, and analysis. During my most recent internship at Bell Helicopter, I designed and prototyped new rotor technology.</p>
     </div>
   </div>
   <hr>
-    <div class="main" id="skills">
-      <div>
-        <h1>Skills</h1>
-        <p>
-          <b> Programming </b> <br>
-        </p>
-        <p>
-          <ul>
-            <li>
-              Front end development <br>
-            </li>
-            <li>
-              Machine learning <br>
-            </li>
-            <li>
-              Robotics <br>
-              Used the MATLAB ROS package to control robotics simulations in <a href="http://gazebosim.org">Gazebo</a>
-            </li>
-          </ul>
-        </p>
-        <p>
-          <b> Engineering </b> <br>
-        </p>
-        <p>
-          <ul>
-            <li>
-              Computer Aided Design (CAD)
-            </li>
-            <li>
-              Multibody Dynamics (MBD) and Computational Fluid Dynamics (CFD)
-            </li>
-            <li>
-              Finite Element Analysis (FEA)
-            </li>
-          </ul>
-        </p>
-        <p>
-          <b> Product Development: </b> <br>
-        </p>
-        <p>
-          <ul>
-            <li>
-              <b>Agile Development:</b> Sprint, Minimum Viable Prototypes (MVP), Feedback and Data Collection
-            </li>
-            <li>
-              <b>User Centered Design:</b> Storyboards, Business Model Canvas (BMC), Competitive Analysis, and Customer Discovery
-            </li>
-            <li>
-              <b>Marketing Products:</b> Presentations/Elevator Pitches, Video, Social Media, and Landing Pages
-            </li>
-          </ul>
-        </p>
-      </div>
+  <!-- Todo: Rest of Resume, add dates to experience -->
+  <div class="main" id="skills">
+    <div>
+      <h1>Skills</h1>
+      <p>
+        <b> Programming </b> <br>
+      </p>
+      <p>
+        <ul>
+          <li>
+            Front end development <br>
+          </li>
+          <li>
+            Machine learning <br>
+          </li>
+          <li>
+            Robotics <br>
+            Used the MATLAB ROS package to control robotics simulations in <a href="http://gazebosim.org">Gazebo</a>
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b> Engineering </b> <br>
+      </p>
+      <p>
+        <ul>
+          <li>
+            Computer Aided Design (CAD)
+          </li>
+          <li>
+            Multibody Dynamics (MBD) and Computational Fluid Dynamics (CFD)
+          </li>
+          <li>
+            Finite Element Analysis (FEA)
+          </li>
+        </ul>
+      </p>
+      <p>
+        <b> Product Development: </b> <br>
+      </p>
+      <p>
+        <ul>
+          <li>
+            <b>Agile Development:</b> Sprint, Minimum Viable Prototypes (MVP), Feedback and Data Collection
+          </li>
+          <li>
+            <b>User Centered Design:</b> Storyboards, Business Model Canvas (BMC), Competitive Analysis, and Customer Discovery
+          </li>
+          <li>
+            <b>Marketing Products:</b> Presentations/Elevator Pitches, Video, Social Media, and Landing Pages
+          </li>
+        </ul>
+      </p>
     </div>
-    <hr>
+  </div>
+  <hr>
   <div class="main" id="experience">
     <div>
       <h1>Professional Experience</h1>
@@ -252,7 +224,7 @@
     <div>
       <h1>Interests</h1>
       <br>
-      <p> When I'm not studying for classes, my main interests are practicing guitar, reading books, and playing soccer. I'm also an avid cook and love to try new dishes when I'm at home. </p>
+      <p>Design, Guitar, Cooking, Soccer</p>
     </div>
   </div>
 </body>
