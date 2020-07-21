@@ -31,6 +31,7 @@ body {
 
 .main {
   margin-left: 20%;
+  padding-top: 1vh;
   padding-left: 2vw;
   padding-right: 2vw;
   font-size: 28px;
@@ -53,7 +54,26 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 768px) {
+.pmobile {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .details {
+    display: none;
+  }
+
+  .pmobile {
+    display:none;
+  }
+
+  .mobile {
+    display:block;
+  }
+
+}
+
+@media screen and (max-width: 1010px) {
   .sidenav {
     display: none
   }
@@ -76,7 +96,15 @@ body {
     display: none;
   }
 
+  .pdetails {
+    display: none;
+  }
+
   .mobile {
+    display:block;
+  }
+
+  .pmobile {
     display:block;
   }
 

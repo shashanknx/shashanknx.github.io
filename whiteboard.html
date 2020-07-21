@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="/images/logo.png">
+
+
+
+  <title>Shashank's Website!</title>
+
+  <style>
+    body {
+      font-size: 20px;
+    }
+
+    .row {
+      justify-content: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+  </script>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <canvas id="myCanvas" width="200" height="150" style="border:5px solid #d3d3d3;">
+      </canvas>
+    </div>
+    <div class="row" style="padding-top: 5px">
+      <button> Clear </button>
+    </div>
+  </div>
+
+
+
+  <script>
+    $(document).ready(() => {
+      var clickX = new Array();
+      var clickY = new Array();
+      var clickDrag = new Array();
+      var paint;
+      var c = document.getElementById("myCanvas");
+      c.width = window.innerWidth * 0.9;
+      c.height = window.innerHeight * .75;
+      var context = setupCanvas(c)
+
+      function setupCanvas(canvas) {
+        // Get the device pixel ratio, falling back to 1.
+        var dpr = window.devicePixelRatio || 1;
+        // Get the size of the canvas in CSS pixels.
+        var rect = canvas.getBoundingClientRect();
+        // Give the canvas pixel dimensions of their CSS
+        // size * the device pixel ratio.
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        var ctx = canvas.getContext('2d');
+        // Scale all drawing operations by the dpr, so you
+        // don't have to worry about the difference.
+        ctx.scale(dpr, dpr);
+        return ctx;
+      }
+
+      function getMousePos(canvas, evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: evt.clientX - rect.left,
+          y: evt.clientY - rect.top
+        }
+      }
+
+      $('#myCanvas').mousedown((e) => {
+        let position = getMousePos(c, e);
+        var mouseX = position.x;
+        var mouseY = position.y;
+        paint = true;
+        addClick(mouseX, mouseY);
+        redraw();
+      });
+
+      function addClick(x, y, dragging) {
+        clickX.push(x);
+        clickY.push(y);
+        clickDrag.push(dragging);
+      }
+
+      $('#myCanvas').mousemove(function(e) {
+        if (paint) {
+          let pos = getMousePos(c, e)
+          addClick(pos.x, pos.y, true);
+          redraw();
+        }
+      });
+
+      $('#myCanvas').mouseleave(function(e) {
+        paint = false;
+      });
+
+      $('#myCanvas').mouseup(function(e) {
+        paint = false;
+      });
+
+      function redraw() {
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        // Clears the canvas
+        context.strokeStyle = "black";
+        context.lineJoin = "round";
+        context.lineWidth = 5;
+
+        for (var i = 0; i < clickX.length; i++) {
+          context.beginPath();
+          if (clickDrag[i] && i) {
+            context.moveTo(clickX[i - 1], clickY[i - 1]);
+          } else {
+            context.moveTo(clickX[i], clickY[i]);
+          }
+          context.lineTo(clickX[i], clickY[i]);
+          context.closePath();
+          context.stroke();
+        }
+      }
+      $('button').click(() => {
+        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+        clickX = new Array();
+        clickY = new Array();
+        clickDrag = new Array();
+        paint = false;
+      })
+
+    });
+  </script>
+</body>
+
+</html>

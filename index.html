@@ -14,7 +14,42 @@
   <!-- Title -->
   <title>Shashank Narayan</title>
   <style>
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+    }
 
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
   </style>
 </head>
 
@@ -26,9 +61,9 @@
         <img src="./images/me.png" alt="Picture of Me" height="200" style="border-radius: 50%">
       </a><br><br>
       <a href="./#">About</a><br><br>
-      <!-- <a href="./#skills">Skills</a><br><br> -->
       <a href="./#work">Work</a><br><br>
-      <a href="./#projects">Projects</a>
+      <a href="./#projects">Projects</a><br><br>
+      <a href="./#whiteboard">Whiteboard</a>
     </div>
   </div>
 
@@ -87,13 +122,13 @@
           </div>
         </div>
         <br>
-        <div class="details" style="overflow: auto">
+        <div class="details" style="overflow: auto; font-size: 18px">
           <img src="./images/bell.jpeg" alt="picture of me at bell" height="200" style="float: left; margin-right: 3vw; border-radius: 5%">
           <p>
             As a design engineer under Bell Flight’s Rotors Division, I designed a test fixture that would be used to test patent-pending designs for one of the company's military programs
             <ul>
               <li>
-                Used the CATIA modeling software to present a detailed design to suppliers for manufacture, to test engineers to implement once parts arrived, and to analysis engineers for use to verify their FEA models
+                Used the CATIA modeling software to present detailed designs to suppliers for manufacture, to test engineers to implement once parts arrived, and to analysis engineers for use to verify their FEA models
               </li>
               <li> Developed a detailed presentation documenting the method of mounting parts to the test bench and the placement/calibration of measuring equipment
               </li>
@@ -118,13 +153,13 @@
           </div>
         </div>
         <br>
-        <div class="details" style="overflow: auto">
+        <div class="details" style="overflow: auto; font-size: 18px">
           <img src="./images/volvo.jpeg" alt="picture of me at bell" height="200" style="float: left; margin-right: 3vw; border-radius: 5%">
           <p>
             As part of Volvo’s Steering Axles and Suspensions Division, I worked on a new front axle load sensor test, a dynamic front suspension model and with procurement for Volvo’s North American Electric Truck prototypes
             <ul>
               <li>
-                Used PTC Creo CAD software to design an assembly for a front suspension load sensor test. Worked in conjunction with a lead engineer, a project manager, and technicians in the machine shop
+                Used PTC Creo CAD software to design an assembly for a front suspension load sensor test.
               </li>
               <li> Built a dynamic model of the steering column of a Volvo VNL model truck using Altair MotionView software and integrated it into the current front suspension model
               </li>
@@ -146,26 +181,84 @@
       <h1 style="text-align: center"> Academic Projects </h1>
       <hr>
       <br>
-      <div class="details">
+      <div class="pdetails">
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+            FoodFinder
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            ML Regression Project
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            GT Off Road
+          </button>
+        </div>
+
+        <div id="London" class="tabcontent">
+          <h3>FoodFinder</h3>
+          <p>
+            Blah
+          </p>
+        </div>
+
+        <div id="Paris" class="tabcontent">
+          <h3>ML Regression Project</h3>
+          <p>
+            Blah
+          </p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>GT Off Road</h3>
+          <p>
+            Blah
+          </p>
+        </div>
       </div>
-      <div class="mobile">
+      <div class="pmobile">
         <p>Check out full descriptions on the desktop site </p>
         <h4> FoodFinder </h4>
         <h4> Ames Housing Regression Project </h4>
         <h4> Baja SAE Racing Team </h4>
-        <h4> CFD Research </h4>
       </div>
     </div>
     <hr>
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
 
-    <!-- skills -->
-    <!-- <div class="main" id="skills">
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+  </div>
+
+  <!-- whiteboard -->
+  <div class="main" id="whiteboard">
+    <div class="container-fluid" style="text-align: center">
+      <p> Whiteboard project (Desktop Only): Updates coming soon! </p>
+      <div class="pdetails">
+
+      <iframe src="./whiteboard.html" title="Whiteboard" height="500" width="100%" style="overflow: hidden; border: none">
+      </iframe>
+      </div>
     </div>
-    <hr> -->
+  </div>
+  <hr>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
