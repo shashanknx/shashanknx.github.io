@@ -60,9 +60,15 @@
       <a href="./">
         <img src="./images/me.png" alt="Picture of Me" height="200" style="border-radius: 50%">
       </a><br><br>
-      <a href="./#">About</a><br><br>
-      <a href="./#work">Work</a><br><br>
-      <a href="./#projects">Projects</a>
+      <a>
+        <h3> Top Skills </h3>
+      </a>
+      <hr style="border-color: white">
+      <div style="text-align: left">
+        <a>- Teamwork</a><br><br>
+        <a>- Critical Thinking</a><br><br>
+        <a>- Problem Solving</a><br>
+      </div>
     </div>
   </div>
 
@@ -73,8 +79,7 @@
       <hr>
       <br>
       <p>
-        Hi, I am Shashank Narayan. I am a 5th year Mechanical Engineering major at Georgia Tech looking for full time positions in Consulting or Technology. My best skills are critical thinking, teamwork, and problem solving. I have technical
-        experience in Computer Science and Engineering Design.
+        Hi, I am Shashank Narayan. I am a 5th year studying Mechanical Engineering and Computer Science at Georgia Tech looking for full time positions for 2021.
       </p>
       <br>
       <div class="row" style="text-align: center">
@@ -85,7 +90,7 @@
             <img src="./images/paper.png" alt="download" height="100">
           </a>
           <p> </p>
-          <p style="font-size: 10px">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></<p>
+          <p style="font-size: 10px">Icon by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></<p>
         </div>
         <div class="col-md-6">
           <p>Connect on LinkedIn</p>
@@ -94,7 +99,7 @@
             <img src="./images/linkedin.png" alt="LinkedIn" height="100">
           </a>
           <p> </p>
-          <p style="font-size: 10px"> Icon made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+          <p style="font-size: 10px"> Icon by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a></p>
         </div>
       </div>
     </div>
@@ -103,8 +108,8 @@
 
 
 
-  <!-- Work -->
-  <div class="main" id="work">
+
+  <!-- <div class="main" id="work">
     <div class="container-fluid">
       <h1 style="text-align: center"> Professional Experience </h1>
       <hr>
@@ -174,82 +179,19 @@
 
   <hr>
 
-  <!-- Projects -->
-  <div class="main" id="projects">
+
+  <div class="main" id="skills">
     <div class="container-fluid">
-      <h1 style="text-align: center"> Academic Projects </h1>
+      <h1 style="text-align: center">Skills</h1>
       <hr>
       <br>
-      <div class="pdetails">
-        <div class="tab">
-          <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
-            FoodFinder
-          </button>
-          <button class="tablinks" onclick="openCity(event, 'Paris')">
-            ML Regression Project
-          </button>
-          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-            GT Off Road
-          </button>
-        </div>
-
-        <div id="London" class="tabcontent">
-          <h3>CS 4251: Mobile Applications</h3>
-          <p>
-            As part of a team of 4, I built a mobile application that helps users find affordable food choices targetted at college students. The technology stack incorporated MongoDB for the database, Express.js for the back-end, React-Native for the front end, and the Node.js runtime environment.
-          </p>
-          <p>
-            In addition to coding, the team learned the principles of the agile development cycle. The app was built in sprints throughout the semester. During that time the team also produced business model canvases, drew user stories, and incorporated feedback from each stage towards showcasing an MVP as a live demo at the end of the semester
-          </p>
-        </div>
-
-        <div id="Paris" class="tabcontent">
-          <h3>CS 4641: Machine Learning</h3>
-          <p>
-            As a final project for my machine learning class, I implemented three regression algorithms on a dataset to create an algorithm that predicted house prices.
-          </p>
-          <p>
-            The three algorithms used were kernel ridge regression, k-neighbors regression and a neural network using the keras library. The initial work used functions in Pandas and Numpy to clean the data and convert/drop categorical data fields. Next, each regresssion algorithm was tuned on a training dataset by adjusting the relevant hyperparameters. Finally the algorithms were tested on a separate "test" dataset with the RMSE value being used to judge accuracy.
-          </p>
-        </div>
-
-        <div id="Tokyo" class="tabcontent">
-          <h3>VIP 3601: VIP Project Team</h3>
-          <p>
-            As a lead engineer, I designed the breaking system for the 2019 Georgia Tech Baja SAE car. The car is a one-seater off-road car and participates in the Baja SAE collegiate design competition.
-          </p>
-          <p>
-            Designing the breaking system was an engineering challenged that required technical knowledge and teamwork. I led a team of 4 other engineering students and collaborated with the leads from other car systems such as chassis, suspension, and steering. I also developed several validation tests and gathered knowledge to troubleshoot various problems that could arise.
-          </p>
-        </div>
-      </div>
-      <div class="pmobile">
-        <p>Check out full descriptions on the desktop site </p>
-        <h4> FoodFinder </h4>
-        <h4> Ames Housing Regression Project </h4>
-        <h4> Baja SAE Racing Team </h4>
-      </div>
+      <p>
+        My interests include: programming, cooking, and guitar.
+      </p>
     </div>
-    <hr>
-    <script>
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-
-      // Get the element with id="defaultOpen" and click on it
-      document.getElementById("defaultOpen").click();
-    </script>
   </div>
+-->
+
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
