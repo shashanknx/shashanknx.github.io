@@ -12,138 +12,186 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/images/logo.png">
   <!-- Title -->
-  <title>Shashank's Website</title>
+  <title>Shashank Narayan</title>
   <style>
+    /* Style the tab */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      /* background-color: #f1f1f1; */
+    }
 
+    /* Style the buttons inside the tab */
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+      background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      /* border: 1px solid #ccc; */
+      border-top: none;
+    }
   </style>
 </head>
 
 <body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="./" style="font-size:22px">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link active" href="http://linkedin.com/in/shashank-a-narayan">
-            LinkedIn
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="http://www.instagram.com/shashanaraya">
-            Instagram
-          </a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link active" href="#">
-            Twitter
-          </a>
-        </li> -->
-      </ul>
-    </div>
-  </nav>
-
-
   <!-- sidenav -->
   <div class="sidenav">
     <div>
-      <a href="./#">About</a>
-      <br>
-      <br>
-      <br>
-      <a href="./#skills">Skills</a>
-      <br>
-      <br>
-      <br>
-      <a href="./#work">Work</a>
-      <br>
-      <br>
-      <br>
-      <a href="./#interests">Interests</a>
+      <a href="./">
+        <img src="./images/me.png" alt="Picture of Me" height="200" style="border-radius: 50%">
+      </a><br><br>
+      <a>
+        <h3> Top Skills </h3>
+      </a>
+      <hr style="border-color: white">
+      <div style="text-align: left">
+        <a>- Teamwork</a><br><br>
+        <a>- Critical Thinking</a><br><br>
+        <a>- Problem Solving</a><br>
+      </div>
     </div>
   </div>
 
   <!-- about -->
   <div class="main" id="about">
-    <div>
-      <h1 style="font-size: 48px;">Shashank Narayan</h1>
-      <h2 style="font-size:30px">Student - Georgia Tech </h2>
-      <p> Undergraduate senior with a well-rounded experience in meeting organization needs through skills in design, development, and analysis.</p>
+    <div class="container-fluid">
+      <h1 style="text-align: center">About Me</h1>
+      <hr>
+      <br>
+      <p>
+        Hi, I am Shashank Narayan. I am a 5th year studying Mechanical Engineering and Computer Science at Georgia Tech looking for full time positions for 2021.
+      </p>
+      <br>
+      <div class="row" style="text-align: center">
+        <div class="col-md-6" id="separator">
+          <p> Download My Resume </p>
+          <br>
+          <a href="./resume/Aug 5.pdf" download="Narayan_Shashank_Resume">
+            <img src="./images/paper.png" alt="download" height="100">
+          </a>
+          <p> </p>
+          <p style="font-size: 10px">Icon by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></<p>
+        </div>
+        <div class="col-md-6">
+          <p>Connect on LinkedIn</p>
+          <br>
+          <a href="linkedin.com/in/shashank-a-narayan">
+            <img src="./images/linkedin.png" alt="LinkedIn" height="100">
+          </a>
+          <p> </p>
+          <p style="font-size: 10px"> Icon by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a></p>
+        </div>
+      </div>
     </div>
   </div>
   <hr>
 
-  <!-- skills -->
+
+
+
+  <!-- <div class="main" id="work">
+    <div class="container-fluid">
+      <h1 style="text-align: center"> Professional Experience </h1>
+      <hr>
+      <br>
+      <div class="container-fluid" style="padding-left: 0px; font-size: 22px">
+        <div class="row">
+          <div class="col-md-8" style="font-size: 24px;">
+            <b style="font-size: 35px"> Bell Flight </b>
+            <br>
+            Aerospace Engineering Intern
+          </div>
+          <div class="col-md-4 align-self-end date" style="font-size: 22px">
+            May - Aug 2019
+          </div>
+        </div>
+        <br>
+        <div class="details" style="overflow: auto; font-size: 18px">
+          <img src="./images/bell.jpeg" alt="picture of me at bell" height="200" style="float: left; margin-right: 3vw; border-radius: 5%">
+          <p>
+            As a design engineer under Bell Flight’s Rotors Division, I designed a test fixture that would be used to test patent-pending designs for one of the company's military programs
+            <ul>
+              <li>
+                Used the CATIA modeling software to present detailed designs to suppliers for manufacture, to test engineers to implement once parts arrived, and to analysis engineers for use to verify their FEA models
+              </li>
+              <li> Developed a detailed presentation documenting the method of mounting parts to the test bench and the placement/calibration of measuring equipment
+              </li>
+
+            </ul>
+          </p>
+        </div>
+        <div class="mobile">
+          As a design engineer under Bell Flight’s Rotors Division, I designed a test fixture that would be used to test patent-pending designs for one of the company's military programs
+        </div>
+      </div>
+      <br>
+      <div class="container-fluid" style="padding-left: 0px; font-size: 22px">
+        <div class="row">
+          <div class="col-md-8" style="font-size: 24px">
+            <b style="font-size: 35px"> Volvo Group </b>
+            <br>
+            Mechanical Engineering Co-op
+          </div>
+          <div class="col-md-4 align-self-end date" style="font-size: 22px">
+            Jan - May 2019
+          </div>
+        </div>
+        <br>
+        <div class="details" style="overflow: auto; font-size: 18px">
+          <img src="./images/volvo.jpeg" alt="picture of me at bell" height="200" style="float: left; margin-right: 3vw; border-radius: 5%">
+          <p>
+            As part of Volvo’s Steering Axles and Suspensions Division, I worked on a new front axle load sensor test, a dynamic front suspension model and with procurement for Volvo’s North American Electric Truck prototypes
+            <ul>
+              <li>
+                Used PTC Creo CAD software to design an assembly for a front suspension load sensor test.
+              </li>
+              <li> Built a dynamic model of the steering column of a Volvo VNL model truck using Altair MotionView software and integrated it into the current front suspension model
+              </li>
+            </ul>
+          </p>
+        </div>
+        <div class="mobile">
+          As part of Volvo’s Steering Axles and Suspensions Division, I worked on a new front axle load sensor test, a dynamic front suspension model and with procurement for Volvo’s North American Electric Truck prototypes
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+
   <div class="main" id="skills">
-    <div>
-      <p style="font-size:40px; font: bold">
-        Programming
-      </p>
-      <p>
-        Data Science, Software Development, Responsive Design
-      </p>
-      <br>
-      <p style="font-size: 40px; font: bold">
-        Engineering
-      </p>
-      <p style="font-size: 30px">
-        Computer Aided Design, Analysis, Rapid Protyping
-      </p>
-      <br>
-      <p style="font-size:40px">Agile Development<br>
-      </p>
-      <p>
-        Minimum Viable Prototypes (MVP), Sprint, Iterative Development
-      </p>
-    </div>
-  </div>
-  <hr>
-
-  <!-- Work -->
-  <div class="main" id="work">
-    <div class="container" style="padding-left: 0px">
-      <div class="row">
-        <div class="col-8" style="font-size: 24px;">
-          <b style="font-size: 35px"> Bell Flight </b>
-          <br>
-          Aerospace Engineering Intern
-        </div>
-        <div class="col align-self-end" style="text-align: right; font-size: 22px">
-          May - Aug 2019
-        </div>
-      </div>
+    <div class="container-fluid">
+      <h1 style="text-align: center">Skills</h1>
       <hr>
-      Used the CATIA modeling software to present a detailed design to suppliers for manufacture, to test engineers to implement once parts arrived, and to analysis engineers for use to verify their FEA models
-    </div>
-    <br>
-    <div class="container" style="padding-left: 0px">
-      <div class="row">
-        <div class="col-8" style="font-size: 24px">
-          <b style="font-size: 35px"> Volvo Group </b>
-          <br>
-          Mechanical Engineering Intern
-        </div>
-        <div class="col align-self-end" style="text-align: right; font-size: 22px">
-          Jan - May 2019
-        </div>
-      </div>
-      <hr>
-      Applied PTC Creo CAD software to design an assembly for a front suspension load sensor test. Worked in conjunction with a lead engineer, a project manager, and technicians in the machine shop
+      <br>
+      <p>
+        My interests include: programming, cooking, and guitar.
+      </p>
     </div>
   </div>
-  <hr>
+-->
 
-  <!-- Interests -->
-  <div class="main" id="interests">
-    <div>
-      In my free time, I love to cook food, play the guitar, and volunteer at student events. <br>
-    </div>
-  </div>
-  <hr>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

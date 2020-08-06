@@ -7,27 +7,21 @@ body {
   overflow-x: hidden;
 }
 
-.navbar {
-  width: 100%;
-  font-size: 20px;
-  position: fixed;
-}
-
 .sidenav {
   height: 100%;
   width: 20%;
   position: fixed;
   z-index: 1;
-  top: 61px;
-  left: 0;
   background-color: #111;
   text-align: center;
-  padding-top: 10rem
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidenav a {
   text-decoration: none;
-  font-size: 30px;
+  font-size: 24px;
   color: #818181;
 }
 
@@ -37,24 +31,50 @@ body {
 
 .main {
   margin-left: 20%;
-  /* Same as the width of the sidenav */
+  padding-top: 1vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
   font-size: 28px;
-  padding: 5rem 5rem 1rem 5rem;
   text-align: left;
-  min-height: 100vh;
-  align-items: center;
   display: flex;
+  justify-content: left;
+  align-items: center;
+  min-height: 100vh;
   color: black;
 }
-
-#work {
-  align-items: left;
-  padding-top: 10rem;
-  font-size: 28px;
-  display: block;
+#separator {
+  border-right: 1pt solid;
+  border-color: #DCDCDC;
 }
 
-@media screen and (max-width: 768px) {
+.col-md-4.align-self-end.date {
+  text-align: right;
+}
+
+.mobile {
+  display: none;
+}
+
+.pmobile {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .details {
+    display: none;
+  }
+
+  .pmobile {
+    display:none;
+  }
+
+  .mobile {
+    display:block;
+  }
+
+}
+
+@media screen and (max-width: 1010px) {
   .sidenav {
     display: none
   }
@@ -64,4 +84,29 @@ body {
     margin-left: 0;
     font-size: 22px;
   }
+
+  #separator {
+    border: none
+  }
+
+  .col-md-4.align-self-end.date {
+    text-align: left;
+  }
+
+  .details {
+    display: none;
+  }
+
+  .pdetails {
+    display: none;
+  }
+
+  .mobile {
+    display:block;
+  }
+
+  .pmobile {
+    display:block;
+  }
+
 }
